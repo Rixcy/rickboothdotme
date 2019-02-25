@@ -14,10 +14,52 @@
         </h1>
       </div>
 
-      <div class="h-4 bg-grey w-full pin-b absolute opacity-75" />
+      <a
+        v-scroll-to="'#sectionOne'"
+        href="#"
+        class="rounded-full border-4 mt-16 p-4 cursor-pointer hover:border-pink trans text-black"
+      >
+        <font-awesome-icon
+          icon="arrow-down"
+          size="4x"
+          class="hover:text-pink trans"
+        />
+      </a>
+
+      <div class="h-4 bg-pink-darkest w-full pin-b absolute" />
     </div>
-    <div class="min-h-screen section-one text-white p-8">
-      HELLO my name is jeff
+    <div
+      id="sectionOne"
+      class="min-h-screen text-white p-8"
+    >
+      <div class="container mx-auto">
+        <p class="mb-4">
+          Soufflé sweet sweet roll. Soufflé fruitcake bear claw candy.
+          Bonbon icing liquorice tart jelly jujubes tootsie roll.
+          Cheesecake danish halvah biscuit cotton candy.
+          Sweet roll carrot cake gingerbread marshmallow.
+          Halvah jelly-o candy croissant dragée carrot cake.
+          Halvah sugar plum pudding oat cake cheesecake.
+          Chocolate bar marshmallow jelly beans pudding biscuit icing bear claw.
+          Pie marzipan cake chocolate bear claw icing cupcake apple pie.
+          Cheesecake cotton candy jelly beans halvah.
+          Tart cookie oat cake gummi bears pudding.
+          Chocolate bar soufflé marzipan pastry apple pie chocolate cake.
+        </p>
+        <p class="mb-4">
+          Gummi bears gingerbread pudding fruitcake.
+          Tiramisu biscuit sugar plum cake chupa chups bear claw chocolate chocolate danish.
+          Bonbon liquorice pie. Chocolate gummies oat cake cotton candy chupa chups.
+          Bear claw tart croissant marzipan muffin. Biscuit brownie sugar plum.
+          Chocolate bar sesame snaps chupa chups tiramisu bonbon brownie.
+          Cheesecake cake gummi bears sesame snaps marzipan jujubes dragée.
+          Pudding jelly beans muffin lemon drops. Pudding brownie tiramisu.
+          Topping chocolate bar cookie cake macaroon chupa chups muffin jelly beans.
+          Topping sugar plum candy canes cake gummi bears bear claw bear claw chocolate cake cake.
+          Sweet roll pie chocolate sugar plum chocolate.
+          Gingerbread jelly-o chocolate apple pie gummi bears chupa chups.
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -35,7 +77,7 @@
       font-size: 130px;
     }
   }
-  .section-one {
+  #sectionOne {
     background-image: url('~@/assets/chalkboard.jpg');
   }
   .trans {
