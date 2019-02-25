@@ -32,8 +32,11 @@
       id="sectionOne"
       class="min-h-screen text-white p-8"
     >
-      <div class="container mx-auto">
-        <p class="mb-4">
+      <div class="container mx-auto px-8">
+        <h1 class="text-secondary text-5xl text-pink-darkest mb-4 mt-16">
+          About Me
+        </h1>
+        <p class="mb-4 text-xl">
           Soufflé sweet sweet roll. Soufflé fruitcake bear claw candy.
           Bonbon icing liquorice tart jelly jujubes tootsie roll.
           Cheesecake danish halvah biscuit cotton candy.
@@ -46,7 +49,7 @@
           Tart cookie oat cake gummi bears pudding.
           Chocolate bar soufflé marzipan pastry apple pie chocolate cake.
         </p>
-        <p class="mb-4">
+        <p class="mb-4 text-lg">
           Gummi bears gingerbread pudding fruitcake.
           Tiramisu biscuit sugar plum cake chupa chups bear claw chocolate chocolate danish.
           Bonbon liquorice pie. Chocolate gummies oat cake cotton candy chupa chups.
