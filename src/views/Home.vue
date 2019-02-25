@@ -1,19 +1,7 @@
 <template>
-  <div class="home">
-    <img
-      alt="Vue logo"
-      src="../assets/logo.png"
-    >
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="home flex items-center min-h-screen justify-center">
+    <h1 class="text-super-xl font-secondary select-none">
+      rickbooth<span class="text-pink-lightest hover:text-pink">dot</span>me
+    </h1>
   </div>
 </template>
-
-<script>
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  components: {
-    HelloWorld
-  }
-}
-</script>

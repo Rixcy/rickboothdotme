@@ -1,16 +1,7 @@
 <template>
   <div
     id="app"
-    class="min-h-screen bg-dark text-white text-center"
   >
-    <div id="nav">
-      <router-link to="/">
-        Home
-      </router-link> |
-      <router-link to="/about">
-        About
-      </router-link>
-    </div>
     <router-view />
   </div>
 </template>
