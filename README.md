@@ -1,5 +1,7 @@
 # rickboothdotme
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5aacbb0e-65b6-4fc5-af25-dd75e40b090b/deploy-status)](https://app.netlify.com/sites/rickboothdotme/deploys)
+
 ## Project setup
 ```
 yarn install
