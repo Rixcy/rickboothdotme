@@ -21,7 +21,7 @@
       <h1
         ref="titleText"
         class="text-super-xl font-secondary select-none typewrite"
-        data-period="2000"
+        data-period="4000"
       >
         <span class="wrap" />
       </h1>
@@ -70,6 +70,9 @@
     animation: shrink-right cubic-bezier(0.785, 0.135, 0.15, 0.86) .75s forwards;
     animation-delay: .4s;
   }
+  .typewrite > .wrap {
+    border-right: 0.04em solid #000;
+  }
 </style>
 
 <script>
@@ -81,9 +84,9 @@ export default {
       txt: '',
       isDeleting: false,
       titleText: [
-        'rickboothdotme',
-        'I am creative',
-        'I make things'
+        'rickbooth dot me',
+        'I make things',
+        'I love tech'
       ]
     }
   },
@@ -95,10 +98,6 @@ export default {
           this.rotateText()
         }
       }
-      var css = document.createElement("style")
-      css.type = "text/css"
-      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000 }"
-      document.body.appendChild(css)
   },
   methods: {
     triggerDarkMode: function (event) {
@@ -119,8 +118,26 @@ export default {
         this.txt = fullTxt.substring(0, this.txt.length + 1)
       }
 
-      this.$refs.titleText.innerHTML = '<span class="wrap">'+this.txt+'</span>'
+      var colouredText = '';
 
+      if (this.txt.split(' ').length > 1) {
+        for (let i = 0; i < this.txt.split(' ').length; i++) {
+          var current = this.txt.split(' ')[i]
+          if (i % 2 == 0) {
+            colouredText+= current
+          } else {
+            colouredText+= `<span class="text-pink">${current}</span>`
+          }
+        }
+      } else {
+        colouredText = this.txt
+      }
+
+      this.$refs.titleText.innerHTML =
+        `
+        <span class="wrap">${colouredText}</span>
+
+        `
       var delta = 200 - Math.random() * 100
 
       if (this.isDeleting) {
