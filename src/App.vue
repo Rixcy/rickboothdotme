@@ -1,7 +1,7 @@
 <template>
   <div
     id="app"
-    class="min-h-screen bg-orange-lighter"
+    class="min-h-screen bg-dark text-white text-center"
   >
     <div id="nav">
       <router-link to="/">
@@ -20,18 +20,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Sans');
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 #nav {
   padding: 30px;
   a {
     font-weight: bold;
-    color: #2c3e50;
     &.router-link-exact-active {
       color: #42b983;
     }
