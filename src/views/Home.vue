@@ -1,35 +1,43 @@
 <template>
-  <div
-    ref="home"
-    class="home flex flex-col items-center min-h-screen justify-center trans trans-slow"
-  >
-    <div class="title-text">
-      <!-- <h1 class="text-super-xl font-secondary select-none">
-        rickbooth
-        <span
-          class="text-pink-lightest trans trans-slow hover:text-pink cursor-pointer"
-          @click="triggerDarkMode"
+  <div>
+    <div
+      ref="home"
+      class="home flex flex-col items-center min-h-screen justify-center trans trans-slow"
+    >
+      <div class="title-text">
+        <h1
+          ref="titleText"
+          class="text-super-xl font-secondary select-none typewrite"
+          data-period="4000"
         >
-          dot
-        </span>
-        me
-        <div
-          ref="line"
-          class="line h-1 bg-pink-lightest w-full"
-        />
-      </h1> -->
-      <h1
-        ref="titleText"
-        class="text-super-xl font-secondary select-none typewrite"
-        data-period="4000"
-      >
-        <span class="wrap" />
-      </h1>
+          <span class="wrap" />
+        </h1>
+      </div>
+
+      <div class="h-4 bg-grey w-full pin-b absolute opacity-75" />
+    </div>
+    <div class="min-h-screen section-one text-white p-8">
+      HELLO my name is jeff
     </div>
   </div>
 </template>
 
 <style lang="scss">
+  .title-text h1 {
+    font-size: 15vw;
+    @screen sm {
+      font-size: 12vw;
+    }
+    @screen md {
+      font-size: 10vw;
+    }
+    @screen lg {
+      font-size: 130px;
+    }
+  }
+  .section-one {
+    background-image: url('~@/assets/chalkboard.jpg');
+  }
   .trans {
     transition: all .25s;
   }
@@ -85,8 +93,8 @@ export default {
       isDeleting: false,
       titleText: [
         'rickbooth dot me',
-        'I make things',
-        'I love tech'
+        'web developer',
+        'tech enthusiast'
       ]
     }
   },
