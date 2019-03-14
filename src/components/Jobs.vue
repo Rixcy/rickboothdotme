@@ -27,13 +27,22 @@
             v-html="job.title"
           />
           <p class="mb-1">
-            <strong>Where: </strong>{{ job.company }}, {{ job.location }}
+            <strong>Where: </strong>
+            <span class="text-md">{{ job.company }}, {{ job.location }}</span>
           </p>
           <p class="mb-1">
-            <strong>When: </strong>{{ job.time_in_role }}
+            <strong>When: </strong>
+            <span
+              class="text-md"
+              v-html="job.time_in_role"
+            />
           </p>
           <p class="mb-1">
-            <strong>What: </strong>{{ job.role }}
+            <strong>What: </strong>
+            <span
+              class="text-md"
+              v-html="job.role"
+            />
           </p>
           <p class="mb-1">
             <strong>Which Technologies: </strong>

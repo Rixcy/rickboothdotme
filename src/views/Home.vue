@@ -64,14 +64,13 @@
         class="wrapper spotlight style1"
       >
         <div class="inner">
-          <a
-            href="#"
-            class="image"
-          ><img
-            src="@/assets/pic01.jpg"
+          <img
+            class="w-auto h-48"
+            style="filter: grayscale(1.0)"
+            src="@/assets/rickbooth.jpg"
             alt=""
-          ></a>
-          <div class="content">
+          >
+          <div class="content ml-10">
             <h2 class="major">
               rickbooth.me
             </h2>
@@ -153,7 +152,14 @@ export default {
           title: 'Analytical Chemist',
           company: 'Keighley Laboratories',
           location: 'Keighley',
-          role: 'Lorem ipsum',
+          role: `
+              As a first job, I worked with ferrous and non-ferrous metals to determine
+              their chemical compositions using various different wet chemistry methods.<br><br>
+              I discovered my passion for	IT in	this role	by managing the
+              company’s	CMS	and	by helping improve general IT procedures such as creating
+              an interactive spreadsheet for calculating the uncertainty	of
+              measurement	with equipment and techniques.
+            `,
           time_in_role: 'September 2012 - September 2015',
           skills: [
             'Atomic Absorption Spectroscopy',
