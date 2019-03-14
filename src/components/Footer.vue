@@ -7,8 +7,12 @@
       <p v-html="footer_text" />
       <form
         method="post"
-        action="#"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
       >
+        <p class="hidden">
+          <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+        </p>
         <div class="fields">
           <div class="field">
             <label for="name">Name</label>
