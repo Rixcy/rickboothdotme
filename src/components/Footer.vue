@@ -6,6 +6,7 @@
       </h2>
       <p v-html="footer_text" />
       <form
+        name="contact"
         method="post"
         netlify-honeypot="bot-field"
         netlify
