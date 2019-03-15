@@ -37,22 +37,22 @@
               v-html="job.time_in_role"
             />
           </p>
+          <hr class="my-2">
+          <p
+            class="mb-1 text-md"
+            v-html="job.role"
+          />
+          <hr class="my-2">
           <p class="mb-1">
-            <strong>What: </strong>
-            <span
-              class="text-md"
-              v-html="job.role"
-            />
-          </p>
-          <p class="mb-1">
-            <strong>Which Technologies: </strong>
-            <span class="flex flex-col mt-2 mb-0">
-              <span
-                v-for="tech in job.skills"
-                class="py-1 px-2 m-1 border border-grey rounded-lg whitespace-no-wrap text-sm hover:bg-grey trans"
-              >
-                {{ tech }}
-              </span>
+            <span class="mt-2 mb-0">
+              <ul class="list-reset">
+                <li
+                  v-for="skill in job.skills"
+                  class="py-1 px-2 m-1 border border-grey rounded-lg text-sm hover:bg-grey trans inline-block"
+                >
+                  {{ skill }}
+                </li>
+              </ul>
             </span>
           </p>
         </article>

@@ -165,6 +165,7 @@ export default {
             'Atomic Absorption Spectroscopy',
             'Inductively Coupled Plasma Mass Spectrometry',
             'Titration',
+            'Distillation'
           ],
           picture: Chemistry
         }
