@@ -35,35 +35,11 @@ let colors = {
   'black': '#22292f',
   'white': '#ffffff',
 
-  'dark': '#1A1A1D',
-  'grey': '#4E4E50',
-  'pink-darkest': '#6F2232',
-  'pink': '#950740',
-  'pink-lightest': '#C3073F',
-
-  'red-darkest': '#3b0d0c',
-  'red-darker': '#621b18',
-  'red-dark': '#cc1f1a',
-  'red': '#e3342f',
-  'red-light': '#ef5753',
-  'red-lighter': '#f9acaa',
-  'red-lightest': '#fcebea',
-
-  'orange-darkest': '#462a16',
-  'orange-darker': '#613b1f',
-  'orange-dark': '#de751f',
-  'orange': '#f6993f',
-  'orange-light': '#faad63',
-  'orange-lighter': '#fcd9b6',
-  'orange-lightest': '#fff5eb',
-
-  'green-darkest': '#0f2f21',
-  'green-darker': '#1a4731',
-  'green-dark': '#1f9d55',
-  'green': '#38c172',
-  'green-light': '#51d88a',
-  'green-lighter': '#a2f5bf',
-  'green-lightest': '#e3fcec',
+  'one': '#5f5449',
+  'two': '#9b6a6c',
+  'three': '#b09398',
+  'four': '#cedfd9',
+  'five': 'ebfcfb'
 }
 
 module.exports = {
@@ -885,7 +861,7 @@ module.exports = {
 
   options: {
     prefix: '',
-    important: false,
+    important: true,
     separator: ':',
   },
 

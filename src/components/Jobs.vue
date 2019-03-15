@@ -48,7 +48,7 @@
               <ul class="list-reset">
                 <li
                   v-for="skill in job.skills"
-                  class="py-1 px-2 m-1 border border-grey rounded-lg text-sm hover:bg-grey trans inline-block"
+                  class="py-1 px-2 m-1 border border-one rounded-lg text-sm hover:bg-one trans inline-block"
                 >
                   {{ skill }}
                 </li>

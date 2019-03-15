@@ -1,5 +1,8 @@
 <template>
-  <section id="footer">
+  <section
+    id="footer"
+    class="bg-white"
+  >
     <div class="inner">
       <h2 class="major">
         Get in touch
@@ -97,7 +100,7 @@ export default {
       footer_text: `
           Want to get in touch about working with me?
           Want to send me a message to let me know how good or bad my website is?
-          Want to get in touch with me because you're a Nigerian prince and you need me to bail you out of jail then reward me handsomely?
+          Want to get in touch with me because you're a Nigerian prince and you need me to bail you out of jail then you'll reward me handsomely?
         `,
       copy_text: '&copy; 2019 Rick Booth. All rights reserved.',
     }
