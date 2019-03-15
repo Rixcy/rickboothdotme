@@ -69,7 +69,8 @@ export default {
   },
   data: function () {
     return {
-      showMenu: false,
+			showMenu: false,
+			footerLoading: true,
       jobs: [
         {
           title: 'Web Developer',

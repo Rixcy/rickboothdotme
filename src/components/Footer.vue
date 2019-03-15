@@ -14,6 +14,7 @@
         netlify-honeypot="bot-field"
         data-netlify="true"
         action="/"
+        @submit.prevent="handleSubmit"
       >
         <input
           type="hidden"
@@ -24,39 +25,56 @@
           <label>Don’t fill this out if you're human: <input name="bot-field"></label>
         </p>
         <div class="fields">
-          <div class="field">
-            <label for="name">Name</label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-            >
+          <div v-if="formError">
+            <p>Oops, looks like something went wrong!</p>
+            <button @click="returnToForm">
+              Back to form
+            </button>
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-            >
+          <div v-if="formSuccess">
+            <p>Thanks for your message! I'll read it soon.</p>
+            <button @click="returnToForm">
+              Back to form
+            </button>
           </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-            />
+          <div v-if="!formError && !formSuccess">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input
+                id="name"
+                v-model="form.name"
+                type="text"
+                name="name"
+              >
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input
+                id="email"
+                v-model="form.email"
+                type="email"
+                name="email"
+              >
+            </div>
+            <div class="field">
+              <label for="message">Message *</label>
+              <textarea
+                id="message"
+                v-model="form.message"
+                name="message"
+                rows="4"
+              />
+            </div>
           </div>
+          <ul class="actions">
+            <li>
+              <input
+                type="submit"
+                value="Send Message"
+              >
+            </li>
+          </ul>
         </div>
-        <ul class="actions">
-          <li>
-            <input
-              type="submit"
-              value="Send Message"
-            >
-          </li>
-        </ul>
       </form>
       <ul class="contact flex flex-col self-center">
         <li>
@@ -91,6 +109,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data: function () {
     return {
@@ -103,6 +123,41 @@ export default {
           Want to get in touch with me because you're a Nigerian prince and you need me to bail you out of jail then you'll reward me handsomely?
         `,
       copy_text: '&copy; 2019 Rick Booth. All rights reserved.',
+      form: {
+        name: '',
+        email: '',
+        message: '',
+      }
+    }
+  },
+  methods: {
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&")
+    },
+    handleSubmit () {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      }
+      axios.post(
+        "/",
+        this.encode({
+          "form-name": "contact",
+          ...this.form
+        }),
+        axiosConfig
+      ).then(() => {
+        this.formSuccess = true
+      }).catch(() => {
+        this.formError = true
+      })
+    },
+    backToForm () {
+      this.formError = false
+      this.formSuccess = false
     }
   }
 }
