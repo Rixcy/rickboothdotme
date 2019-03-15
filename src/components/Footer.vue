@@ -10,6 +10,7 @@
         method="post"
         netlify-honeypot="bot-field"
         data-netlify="true"
+        action="/"
       >
         <input
           type="hidden"
